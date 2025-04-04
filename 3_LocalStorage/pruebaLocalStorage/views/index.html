@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storge</title>
+</head>
+<body>
+    <h1>Iniciar Sesion</h1>
+    <input type="text"id="username" placeholder="Ingresa el usuario">
+    <button onclick="saveData()">Recordar Usuario </button>
+    <button onclick="loadData()">Cargar</button>
+
+    <script>
+    function saveData(){
+        const username = document.getElementById('username').value;
+        localStorage.setItem('username', username);
+        alert('dato guardado con exito');
+    }
+
+    function loadData(){
+        const username = localStorage.getItem('username');
+        alert(username||'No hay datos guardados');
+    }
+    </script>
+</body>
+</html>
