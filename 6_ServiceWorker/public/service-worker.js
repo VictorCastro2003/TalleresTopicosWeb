@@ -1,7 +1,5 @@
 const { response } = require("express");
-
 const CACHE_NAME='formulario-cache';
-
 const urlsToCache=[
     '/',
     '/index.html',
@@ -11,7 +9,6 @@ const urlsToCache=[
 ];
 self.addEventListener('install',event=>{
     console.log('Instalando');
-
     event.waitUntil(
         caches.open(CACHE_NAME).then(cache=>{
             console.log('Cacheando archivos');
