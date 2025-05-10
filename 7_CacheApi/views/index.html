@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cache API con Express</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Práctica Cache API</h1>
+  <p>Abre las herramientas de desarrollo y luego desconéctate de Internet. Todo deberia estar bien aqui por arte de magia.</p>
+  <script src="/main.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(() => console.log('Todo se realizo correctamente'))
+        .catch(err => console.error('Error al registrar', err));
+    }
+  </script>
+</body>
+</html>
